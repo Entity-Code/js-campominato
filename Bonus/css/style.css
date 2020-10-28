@@ -1,0 +1,21 @@
+/* regole generali */
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+
+div{
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 3px solid black;
+   padding: 10px;
+}
+
+#gioca{
+   padding: 10px;
+   font-size: 50px;
+   margin-top: 20px;
+}
