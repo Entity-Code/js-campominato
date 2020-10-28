@@ -1,10 +1,11 @@
 // GENERAZIONE LISTA 16 (BOMBE)
 var bombsNum = [];
-// i = 1;
-// while (bombsNum.length < 16) {
-//    console.log(randomNum(100));
-//    i++;
-// }
+i = 1;
+while (bombsNum.length < 16) {
+   bombsNum[i] = randomNum(100);
+   console.log(bombsNum[i]);
+   i++;
+}
 
 
 
