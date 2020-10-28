@@ -4,10 +4,11 @@ console.log(safeNum);
 
 //RICHIESTA ALL'UTENTE DI INSERIRE NUMERO COMPRESO TRA 1 E 100 (100-16) VOLTE
 
-for (var i = 1; i <= (100-16); i++) {
-   var requestNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
+// for (var i = 1; i <= (100-16)); i++) {
+//    var requestNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
+// }
 
-}
+
 
 
 
