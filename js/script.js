@@ -4,7 +4,6 @@ gioca.addEventListener("click",
 	function() {
       // GENERAZIONE LISTA 16 (BOMBE)
       var bombsList = ["Numeri bomba -> "];
-
       while (bombsList.length < 16) {
          var bombsElement = randomNum(100);
          if (bombsList.includes(bombsElement) == false) {
@@ -18,7 +17,7 @@ gioca.addEventListener("click",
       // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
       // caso mina non trovata
       var minaTrovata = false;
-      //salvataggio valori inseriti dall'utente 
+      //salvataggio valori inseriti dall'utente
       var userNumList = [];
       var i = 0;
       while (i < 84 && minaTrovata == false) {

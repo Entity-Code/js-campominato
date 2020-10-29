@@ -28,7 +28,7 @@ easy.addEventListener("click",
 		         }
 		      }
 		      // discommentare questo console.log per vedere in quali numeri si trovano le bombe
-		      // console.log(bombsList);
+		      console.log(bombsList);
 
 		      // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
 		      // caso mina non trovata
@@ -37,9 +37,9 @@ easy.addEventListener("click",
 		      //salvataggio valori inseriti dall'utente
 		      var userNumList = [];
 		      var i = 0;
-		      while (i < 84 && minaTrovata == false) {
-		         // chiedo all'utente di inserire un numero
-		         // var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
+		      while (i < (100-16) && minaTrovata == false) {
+		         // l'utente inserisce numero compreso tra 1 e 100
+		         var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
 
 		         // controllo che il numero inserito si trovi nel range indicato
 		         if (userNum > 100 || userNum < 1) {
@@ -58,14 +58,14 @@ easy.addEventListener("click",
 		         } else {
 		            // push valori di input nell'array salvataggio
 		            userNumList.push(userNum);
-		            console.log("Numeri che hai già utilizzato: " + userNumList);
+		            console.log("Numero già utilizzato: " + userNumList);
 		         }
 		         i++;
 		      }
 
 		      // score
-		      alert("Hai fatto : " + (--i) + " punti");
-		      // location.reload();
+		      alert("Hai fatto : " + (--i) + " punti in EASY MODE!");
+		      location.reload();
 			}
 		);
 	}
@@ -87,6 +87,55 @@ medium.addEventListener("click",
 			function() {
 				containerPlay.className = "dNone";
 				gardenMedium.className = "dBlock";
+
+				// GENERAZIONE LISTA 16 (BOMBE)
+		      var bombsList = [];
+		      while (bombsList.length < 16) {
+		         var bombsElement = randomNum(70);
+		         if (bombsList.includes(bombsElement) == false) {
+		            bombsList.push(bombsElement);
+		         }
+		      }
+		      // discommentare questo console.log per vedere in quali numeri si trovano le bombe
+		      console.log(bombsList);
+
+		      // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
+		      // caso mina non trovata
+		      var minaTrovata = false;
+				var numInRange = true;
+		      //salvataggio valori inseriti dall'utente
+		      var userNumList = [];
+		      var i = 0;
+		      while (i < (80-16) && minaTrovata == false) {
+		         // l'utente inserisce numero compreso tra 1 e 80
+		         var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 80"));
+
+		         // controllo che il numero inserito si trovi nel range indicato
+		         if (userNum > 80 || userNum < 1) {
+		            alert("Questo numero non è compreso tra 1 e 80 !")
+		         }
+
+		         // controllo mina trovata
+		         if (bombsList.includes(userNum) == true) {
+		            minaTrovata = true;
+		            alert("BUM, hai perso !");
+		         }
+
+		         // controllo doppione numero inserito
+		         if (userNumList.includes(userNum) == true) {
+		            alert("Hai già usato questo numero, riprova !");
+		         } else {
+		            // push valori di input nell'array salvataggio
+		            userNumList.push(userNum);
+		            console.log("Numero già utilizzato: " + userNumList);
+		         }
+		         i++;
+		      }
+
+		      // score
+		      alert("Hai fatto : " + (--i) + " punti in MEDIUM MODE!");
+		      location.reload();
+
 			}
 		);
 });
@@ -102,6 +151,54 @@ hard.addEventListener("click",
 			function() {
 				containerPlay.className = "dNone";
 				gardenHard.className = "dBlock";
+
+				// GENERAZIONE LISTA 16 (BOMBE)
+		      var bombsList = [];
+		      while (bombsList.length < 16) {
+		         var bombsElement = randomNum(50);
+		         if (bombsList.includes(bombsElement) == false) {
+		            bombsList.push(bombsElement);
+		         }
+		      }
+		      // discommentare questo console.log per vedere in quali numeri si trovano le bombe
+		      console.log(bombsList);
+
+		      // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
+		      // caso mina non trovata
+		      var minaTrovata = false;
+				var numInRange = true;
+		      //salvataggio valori inseriti dall'utente
+		      var userNumList = [];
+		      var i = 0;
+		      while (i < (50-16) && minaTrovata == false) {
+		         // l'utente inserisce numero compreso tra 1 e 80
+		         var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 50"));
+
+		         // controllo che il numero inserito si trovi nel range indicato
+		         if (userNum > 80 || userNum < 1) {
+		            alert("Questo numero non è compreso tra 1 e 50 !")
+		         }
+
+		         // controllo mina trovata
+		         if (bombsList.includes(userNum) == true) {
+		            minaTrovata = true;
+		            alert("BUM, hai perso !");
+		         }
+
+		         // controllo doppione numero inserito
+		         if (userNumList.includes(userNum) == true) {
+		            alert("Hai già usato questo numero, riprova !");
+		         } else {
+		            // push valori di input nell'array salvataggio
+		            userNumList.push(userNum);
+		            console.log("Numero già utilizzato: " + userNumList);
+		         }
+		         i++;
+		      }
+
+		      // score
+		      alert("Hai fatto : " + (--i) + " punti in Medium Mode !");
+		      location.reload();
 			}
 		);
 	}
