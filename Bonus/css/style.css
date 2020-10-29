@@ -14,11 +14,16 @@ body{
 
 /* title 1*/
 #cont-titleMode{
+   padding: 20px;
+   border-radius: 10px;
    text-align: center;
    position:absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+   -webkit-box-shadow: 9px 13px 77px 48px rgba(255,255,255,1);
+   -moz-box-shadow: 9px 13px 77px 48px rgba(255,255,255,1);
+   box-shadow: 9px 13px 77px 48px rgba(255,255,255,1);
 }
 #cont-titleMode > h1{
    font-size: 50px;
@@ -36,9 +41,10 @@ body{
    border: 1px solid gray;
    transition: all 0.3s ease;
 }
+
 .styleMode:hover{
    transform: scale(0.9);
-   border: 1px solid #006aff;
+   border: 5px solid #fff;
    opacity: 0.7;
 }
 #mode > div{
@@ -63,46 +69,62 @@ body{
    padding: 10px;
 }
 
-#containerPlay > #play{
-   background-color: lightgray;
-   color: black;
-   margin-bottom: 20px;
-}
-
 #play{
-   padding: 10px;
+   background-color: black;
+   color: white;
+   margin-bottom: 20px;
+   padding: 20px 40px;
    font-size: 50px;
    margin-top: 20px;
+   position: relative;
+   transition: all 0.5s;
+   cursor: pointer;
 }
+
+#play:hover{
+   border: 20px double white;
+   transform: scale(1.2);
+   -webkit-box-shadow: 10px 0px 80px -8px rgba(255,255,255,0.5);
+   -moz-box-shadow: 10px 0px 80px -8px rgba(255,255,255,0.5);
+   box-shadow: 10px 0px 80px -8px rgba(255,255,255,0.5);
+}
+
+
+
+
 /* play 3*/
 
 /* back */
 #back{
    font-size: 20px;
-   position:absolute;
+   /* position:absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, 150%);
-   padding: -20px;
+   transform: translate(-50%, 150%); */
    transition: all 0.5s ease;
    color: black;
    padding-left: 15px;
 }
 #back:hover{
-   color: red;
+   color: white;
 }
 #back span{
    color: white;
-   font-size: 60px;
+   font-size: 50px;
    cursor: pointer;
 }
-
 /* back */
 
 
 
-/* cell list 4*/
-#my-list{
+/* boxes 4*/
+.gardenStyle{
+   background-color: lightblue;
+   width: 500px;
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    list-style-type: none;
    display: flex;
    flex-flow: row wrap;
@@ -115,7 +137,7 @@ li{
    border: 1px solid black;
    padding: 10px;
 }
-/* cell list 4*/
+/* boxes 4*/
 
 
 

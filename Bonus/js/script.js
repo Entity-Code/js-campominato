@@ -2,20 +2,25 @@
 var containerPlay = document.getElementById("containerPlay");
 var play = document.getElementById("play");
 var titleMode = document.getElementById("cont-titleMode");
-var backBtn = document.getElementById("backBtn");
-
+var gardenEasy = document.getElementById("cont-gardenEasy");
+var gardenMedium = document.getElementById("cont-gardenMedium");
+var gardenHard = document.getElementById("cont-gardenHard");
 
 //easy
 var easy = document.getElementById("easyMode");
 easy.addEventListener("click",
 	function() {
+		// passaggio mode -> btn play
 		titleMode.className = "dNone";
 		containerPlay.className = "dBlock";
+		// passaggio btn play -> game easy
 		play.addEventListener("click",
 			function() {
-		      // GENERAZIONE LISTA 16 (BOMBE)
-		      var bombsList = ["Numeri bomba -> "];
+				containerPlay.className = "dNone";
+				gardenEasy.className = "dBlock";
 
+		      // GENERAZIONE LISTA 16 (BOMBE)
+		      var bombsList = [];
 		      while (bombsList.length < 16) {
 		         var bombsElement = randomNum(100);
 		         if (bombsList.includes(bombsElement) == false) {
@@ -34,7 +39,7 @@ easy.addEventListener("click",
 		      var i = 0;
 		      while (i < 84 && minaTrovata == false) {
 		         // chiedo all'utente di inserire un numero
-		         var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
+		         // var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
 
 		         // controllo che il numero inserito si trovi nel range indicato
 		         if (userNum > 100 || userNum < 1) {
@@ -60,11 +65,15 @@ easy.addEventListener("click",
 
 		      // score
 		      alert("Hai fatto : " + (--i) + " punti");
-		      location.reload();
+		      // location.reload();
 			}
 		);
 	}
 );
+
+
+
+
 
 //medium
 var medium = document.getElementById("mediumMode");
@@ -73,8 +82,14 @@ medium.addEventListener("click",
 		titleMode.className = "dNone";
  	  	containerPlay.className = "dBlock";
 		//mode medium
-	}
-);
+
+		play.addEventListener("click",
+			function() {
+				containerPlay.className = "dNone";
+				gardenMedium.className = "dBlock";
+			}
+		);
+});
 
 //hard
 var hard = document.getElementById("hardMode");
@@ -83,14 +98,22 @@ hard.addEventListener("click",
 		titleMode.className = "dNone";
  	  	containerPlay.className = "dBlock";
 		//mode hard
+		play.addEventListener("click",
+			function() {
+				containerPlay.className = "dNone";
+				gardenHard.className = "dBlock";
+			}
+		);
 	}
 );
 
-backBtn.addEventListener("click",
-	function() {
-	  location.reload();
-	}
-);
+
+
+
+function backReload() {
+	location.reload();
+}
+
 
 
 
