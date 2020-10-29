@@ -3,16 +3,37 @@
    <head>
       <meta charset="utf-8">
       <link rel="stylesheet" href="css/style.css">
-      <title>CAMPO MINATO</title>
+      <title>CAMPO MINATO BONUS</title>
    </head>
    <body>
-      bonus
-      <!-- creato solo per fixare i mille bug del prompt riguardo la console, dando il tempo di aprirla -->
-      <div>
-         <h1>Apri la console prima di iniziare</h1>
-         <button id="gioca" type="button" name="button">GIOCA</button>
+
+
+      <div id="cont-titleMode" class="dBlock">
+         <!-- title 1 -->
+         <h1>LANDMINE GAME</h1>
+         <!-- MODE 2 -->
+         <div id="mode" >
+            <h2>Seleziona la difficoltà</h2>
+            <div id="easyMode" class="styleMode">EASY</div>
+            <div id="mediumMode" class="styleMode">MEDIUM</div>
+            <div id="hardMode" class="styleMode">HARD</div>
+         </div>
       </div>
 
+
+
+
+      <!-- PLAY 3-->
+      <div id="containerPlay" class="dNone">
+         <button id="play" type="button" name="button">PLAY</button>
+         <div id="back"> <span id="backBtn">&#x2190; </span>go back</div>
+      </div>
+
+
+      <!-- CELL LIST 4-->
+      <ul id="my-list" class="dBlock">
+         <!-- dinamiche -->
+      </ul>
 
 
       <script type="text/javascript" src="js/script.js"></script>

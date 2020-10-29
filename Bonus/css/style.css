@@ -3,19 +3,128 @@
    margin:0;
    padding:0;
    box-sizing: border-box;
+   color: white;
+   font-family: fantasy;
+   cursor: crosshair;
 }
 
-div{
+body{
+   background-color: black;
+}
+
+/* title 1*/
+#cont-titleMode{
+   text-align: center;
    position:absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   border: 3px solid black;
+}
+#cont-titleMode > h1{
+   font-size: 50px;
+   padding-bottom: 35px;
+}
+/* title 1 */
+
+/* mode 2*/
+#mode{
+   border: 20px double white;
+   padding: 10px;
+}
+.styleMode{
+   padding: 5px 0;
+   border: 1px solid gray;
+   transition: all 0.3s ease;
+}
+.styleMode:hover{
+   transform: scale(0.9);
+   border: 1px solid #006aff;
+   opacity: 0.7;
+}
+#mode > div{
+   font-size: 25px;
+   margin: 15px 0;
+}
+#mode > h2{
+   font-size: 35px;
+   border-bottom: 2px dashed white;
+   margin-bottom: 25px;
+}
+/* mode 2*/
+
+
+
+/* play 3*/
+#containerPlay{
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    padding: 10px;
 }
 
-#gioca{
+#containerPlay > #play{
+   background-color: lightgray;
+   color: black;
+   margin-bottom: 20px;
+}
+
+#play{
    padding: 10px;
    font-size: 50px;
    margin-top: 20px;
+}
+/* play 3*/
+
+/* back */
+#back{
+   font-size: 20px;
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, 150%);
+   padding: -20px;
+   transition: all 0.5s ease;
+   color: black;
+   padding-left: 15px;
+}
+#back:hover{
+   color: red;
+}
+#back span{
+   color: white;
+   font-size: 60px;
+   cursor: pointer;
+}
+
+/* back */
+
+
+
+/* cell list 4*/
+#my-list{
+   list-style-type: none;
+   display: flex;
+   flex-flow: row wrap;
+}
+
+li{
+   width: 50px;
+   height: 50px;
+   background-color: green;
+   border: 1px solid black;
+   padding: 10px;
+}
+/* cell list 4*/
+
+
+
+
+
+/* js */
+.dNone{
+   display: none;
+}
+.dBlock{
+   display: block;
 }
