@@ -28,7 +28,7 @@ easy.addEventListener("click",
 		         }
 		      }
 		      // discommentare questo console.log per vedere in quali numeri si trovano le bombe
-		      console.log(bombsList);
+		      // console.log(bombsList);
 
 		      // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
 		      // caso mina non trovata
@@ -82,7 +82,6 @@ medium.addEventListener("click",
 		titleMode.className = "dNone";
  	  	containerPlay.className = "dBlock";
 		//mode medium
-
 		play.addEventListener("click",
 			function() {
 				containerPlay.className = "dNone";
@@ -97,7 +96,7 @@ medium.addEventListener("click",
 		         }
 		      }
 		      // discommentare questo console.log per vedere in quali numeri si trovano le bombe
-		      console.log(bombsList);
+		      // console.log(bombsList);
 
 		      // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
 		      // caso mina non trovata
@@ -135,7 +134,6 @@ medium.addEventListener("click",
 		      // score
 		      alert("Hai fatto : " + (--i) + " punti in MEDIUM MODE!");
 		      location.reload();
-
 			}
 		);
 });
