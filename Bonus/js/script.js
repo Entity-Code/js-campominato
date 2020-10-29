@@ -159,7 +159,7 @@ hard.addEventListener("click",
 		         }
 		      }
 		      // discommentare questo console.log per vedere in quali numeri si trovano le bombe
-		      console.log(bombsList);
+		      // console.log(bombsList);
 
 		      // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
 		      // caso mina non trovata
@@ -195,7 +195,7 @@ hard.addEventListener("click",
 		      }
 
 		      // score
-		      alert("Hai fatto : " + (--i) + " punti in Medium Mode !");
+		      alert("Hai fatto : " + (--i) + " punti in HARD MODE !");
 		      location.reload();
 			}
 		);
