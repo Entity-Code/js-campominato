@@ -7,7 +7,7 @@ gioca.addEventListener("click",
       var bombsList = ["Numeri bomba -> "];
       while (bombsList.length < 16) {
          var bombsElement = randomNum(100);
-         if (bombsList.includes(bombsElement) == false) {
+         if (!bombsList.includes(bombsElement)) {
             bombsList.push(bombsElement);
          }
       }
@@ -35,13 +35,13 @@ gioca.addEventListener("click",
          }
 
          // controllo mina trovata
-         if (bombsList.includes(userNum) == true) {
+         if (bombsList.includes(userNum)) {
             minaTrovata = true;
             alert("BUM, hai perso !");
          }
 
          // controllo doppione numero inserito
-         if (userNumList.includes(userNum) == true) {
+         if (userNumList.includes(userNum)) {
             alert("Hai già usato questo numero, riprova !");
          } else {
             // push valori di input nell'array salvataggio
