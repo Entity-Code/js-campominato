@@ -23,7 +23,7 @@ easy.addEventListener("click",
 		      var bombsList = [];
 		      while (bombsList.length < 16) {
 		         var bombsElement = randomNum(100);
-		         if (bombsList.includes(bombsElement) == false) {
+		         if (!bombsList.includes(bombsElement)) {
 		            bombsList.push(bombsElement);
 		         }
 		      }
@@ -51,13 +51,13 @@ easy.addEventListener("click",
 		         }
 
 		         // controllo mina trovata
-		         if (bombsList.includes(userNum) == true) {
+		         if (bombsList.includes(userNum)) {
 		            minaTrovata = true;
 		            alert("BUM, hai perso !");
 		         }
 
 		         // controllo doppione numero inserito
-		         if (userNumList.includes(userNum) == true) {
+		         if (userNumList.includes(userNum)) {
 		            alert("Hai già usato questo numero, riprova !");
 		         } else {
 		            // push valori di input nell'array salvataggio
@@ -95,7 +95,7 @@ medium.addEventListener("click",
 		      var bombsList = [];
 		      while (bombsList.length < 16) {
 		         var bombsElement = randomNum(70);
-		         if (bombsList.includes(bombsElement) == false) {
+		         if (!bombsList.includes(bombsElement)) {
 		            bombsList.push(bombsElement);
 		         }
 		      }
@@ -123,13 +123,13 @@ medium.addEventListener("click",
 		         }
 
 		         // controllo mina trovata
-		         if (bombsList.includes(userNum) == true) {
+		         if (bombsList.includes(userNum)) {
 		            minaTrovata = true;
 		            alert("BUM, hai perso !");
 		         }
 
 		         // controllo doppione numero inserito
-		         if (userNumList.includes(userNum) == true) {
+		         if (userNumList.includes(userNum)) {
 		            alert("Hai già usato questo numero, riprova !");
 		         } else {
 		            // push valori di input nell'array salvataggio
@@ -162,7 +162,7 @@ hard.addEventListener("click",
 		      var bombsList = [];
 		      while (bombsList.length < 16) {
 		         var bombsElement = randomNum(50);
-		         if (bombsList.includes(bombsElement) == false) {
+		         if (!bombsList.includes(bombsElement)) {
 		            bombsList.push(bombsElement);
 		         }
 		      }
@@ -184,19 +184,19 @@ hard.addEventListener("click",
 		         if (userNum > 100 || userNum < 1) {
 		            alert("Questo numero non è compreso tra 1 e 100 !")
 						--i;
-		         } else if (isNaN(userNum) == true) {
+		         } else if (isNaN(userNum)) {
 		         	alert("Questo non è un numero !");
 						--i;
 		         }
 
 		         // controllo mina trovata
-		         if (bombsList.includes(userNum) == true) {
+		         if (bombsList.includes(userNum)) {
 		            minaTrovata = true;
 		            alert("BUM, hai perso !");
 		         }
 
 		         // controllo doppione numero inserito
-		         if (userNumList.includes(userNum) == true) {
+		         if (userNumList.includes(userNum)) {
 		            alert("Hai già usato questo numero, riprova !");
 		         } else {
 		            // push valori di input nell'array salvataggio
@@ -213,9 +213,6 @@ hard.addEventListener("click",
 		);
 	}
 );
-
-
-
 
 function backReload() {
 	location.reload();
