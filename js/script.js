@@ -2,6 +2,7 @@
 var gioca = document.getElementById("gioca");
 gioca.addEventListener("click",
 	function() {
+
       // GENERAZIONE LISTA 16 (BOMBE)
       var bombsList = ["Numeri bomba -> "];
       while (bombsList.length < 16) {
@@ -11,7 +12,7 @@ gioca.addEventListener("click",
          }
       }
       // discommentare questo console.log per vedere in quali numeri si trovano le bombe
-      // console.log(bombsList);
+      console.log(bombsList);
 
 
       // GENERAZIONE RICHIESTE NUMERO UTENTE/ BOMBE / CASO DELL'INSERIMENTO NUMERI UGUALI
@@ -23,9 +24,14 @@ gioca.addEventListener("click",
       while (i < 84 && minaTrovata == false) {
          // chiedo all'utente di inserire un numero
          var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
-         // controllo che il numero inserito si trovi nel range indicato
+
+         // controllo che il numero inserito si trovi nel range indicato o non sia un numero
          if (userNum > 100 || userNum < 1) {
             alert("Questo numero non è compreso tra 1 e 100 !")
+				--i;
+         } else if (isNaN(userNum) == true) {
+         	alert("Questo non è un numero !");
+				--i;
          }
 
          // controllo mina trovata
@@ -48,7 +54,6 @@ gioca.addEventListener("click",
       // score
       alert("Hai fatto : " + (--i) + " punti");
       location.reload();
-
 	}
 );
 
@@ -57,13 +62,14 @@ gioca.addEventListener("click",
 
 
 
+
+
 //Functions
 
-// transformazione stringa reverse
 function randomNum(max) {
-   if (max) { //se max è stato inserito, allora ritornami il valore random
-   return Math.floor(Math.random() * max) + 1;
-   } else { //se non è stato inserito, allora stampa questo messaggio
-      return 0;
-   }
+	if (max) {
+		return Math.floor(Math.random() * max) + 1;
+	} else {
+		return 0;
+	}
 }

@@ -41,9 +41,13 @@ easy.addEventListener("click",
 		         // l'utente inserisce numero compreso tra 1 e 100
 		         var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
 
-		         // controllo che il numero inserito si trovi nel range indicato
+					// controllo che il numero inserito si trovi nel range indicato o non sia un numero
 		         if (userNum > 100 || userNum < 1) {
 		            alert("Questo numero non è compreso tra 1 e 100 !")
+						--i;
+		         } else if (isNaN(userNum) == true) {
+		         	alert("Questo non è un numero !");
+						--i;
 		         }
 
 		         // controllo mina trovata
@@ -109,9 +113,13 @@ medium.addEventListener("click",
 		         // l'utente inserisce numero compreso tra 1 e 80
 		         var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 80"));
 
-		         // controllo che il numero inserito si trovi nel range indicato
-		         if (userNum > 80 || userNum < 1) {
-		            alert("Questo numero non è compreso tra 1 e 80 !")
+					// controllo che il numero inserito si trovi nel range indicato o non sia un numero
+		         if (userNum > 100 || userNum < 1) {
+		            alert("Questo numero non è compreso tra 1 e 100 !")
+						--i;
+		         } else if (isNaN(userNum) == true) {
+		         	alert("Questo non è un numero !");
+						--i;
 		         }
 
 		         // controllo mina trovata
@@ -172,9 +180,13 @@ hard.addEventListener("click",
 		         // l'utente inserisce numero compreso tra 1 e 80
 		         var userNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 50"));
 
-		         // controllo che il numero inserito si trovi nel range indicato
-		         if (userNum > 80 || userNum < 1) {
-		            alert("Questo numero non è compreso tra 1 e 50 !")
+					// controllo che il numero inserito si trovi nel range indicato o non sia un numero
+		         if (userNum > 100 || userNum < 1) {
+		            alert("Questo numero non è compreso tra 1 e 100 !")
+						--i;
+		         } else if (isNaN(userNum) == true) {
+		         	alert("Questo non è un numero !");
+						--i;
 		         }
 
 		         // controllo mina trovata
